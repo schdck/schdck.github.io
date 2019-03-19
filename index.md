@@ -41,3 +41,10 @@ The idea was that the teacher would add questions and answers to the software an
 <sub>PowerShell</sub>
 
 Virtual Machine Replication Health Notifier is a _very_ simple PowerShell script to send you an e-mail when one of your Hyper-V Virtual Machines replication fail.
+
+### [ph0ton Admin System](https://forum.sa-mp.com/showthread.php?t=477391)
+<sub>PAWN</sub>
+
+This was my first "big" project (it dates back to 2013). It is a Filter Script that could be added to a SA-MP server ir order to add admin functionalities such as banning users, saving account details, creating logs, etc.
+
+The page linked is in Portuguese.
