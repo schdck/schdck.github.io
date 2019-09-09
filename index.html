@@ -1,0 +1,22 @@
+---
+layout: home
+title: Home
+---
+
+<script type="text/javascript">
+    function checkForPosts() {
+        var catalogue = document.getElementsByClassName("catalogue")[0];
+
+        if(catalogue.children.length == 0) {
+            var paragraph = document.createElement("p");
+            var text = document.createTextNode("This blog doesn't have any (public) posts yet. Check back later.");
+
+            paragraph.style = "text-align: center; margin-top: 50px;"
+
+            paragraph.appendChild(text);
+            catalogue.appendChild(paragraph);
+        }
+    }
+
+    window.onload = checkForPosts;
+</script>
