@@ -11,9 +11,9 @@ I started to code when I was fourteen years old. My first programming language w
 
 I studied to be a Computer Technician at the <a href="http://www.farroupilha.ifrs.edu.br/site/">Federal Institute of Rio Grande do Sul (IFRS) in Farroupilha</a> for three years, but dropped the course in 2017 so that I could start to study Computer Science at the <a href="http://site.ufsm.br/">Federal University of Santa Maria</a>.
 
-My first professional experience was as an intern at the Department of Educational Technologies in the <a href="http://www.educacao.rs.gov.br/cre-04-caxias-do-sul">Fourth Regional Coordination of Education (May ~ October, 2015)</a>.
+My first professional experience was as an intern at the Department of Educational Technologies in the <a href="http://www.educacao.rs.gov.br/cre-04-caxias-do-sul">Fourth Regional Coordination of Education</a> (May ~ October, 2015).
 
-In the end of 2015 I started to work at <a href="http://eleaut.com.br">ELEAUT</a>. I worked there for four years develiping .NET tools to automate workflows (specially from IT) as well as applications (both mobile and desktop) that were used by the end-customers as an interface to manage ELEAUT's products. Even though I worked as a developer, since it was a small company, I also ended up learning and doing a lot of IT stuff: from managing networks and vlans to setting up servers and infrastructure.
+In the end of 2015 I started to work at <a href="http://eleaut.com.br">ELEAUT</a>. I worked there for four years developing .NET tools to automate workflows (specially from IT) as well as applications (both mobile and desktop) that were used by the end-customers as an interface to manage ELEAUT's products. Even though I worked as a developer, since it was a small company, I also ended up learning and doing a lot of IT stuff: from managing networks and vlans to setting up servers and infrastructure.
 
 Currently interested in infosec. Focusing on iOS and WebKit.
 
