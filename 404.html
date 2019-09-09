@@ -3,22 +3,77 @@ layout: default
 ---
 
 <style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
+  h3 {
     margin: 30px 0;
     font-size: 4em;
     line-height: 1;
     letter-spacing: -1px;
   }
+
+  .blue-screen {
+    max-width: 570px; 
+    background-color:#004091; 
+    padding: 5px;
+  }
+
+  .blue-screen p {
+    font-size: 12px; 
+    line-height: 110%; 
+    font-family: Lucida Console; 
+    color: #cce7f0; 
+    margin: 5px;
+  }
+
+  @media screen and (max-width: 580px) {
+    .blue-screen {
+      visibility: collapse;
+    }
+
+    h3, p {
+      text-align: center;
+      margin-top: 15px;
+      margin-bottom: 0px;
+    }
+  }
 </style>
 
-<div class="container">
-  <h1>404</h1>
-
-  <p><strong>Page not found :(</strong></p>
+<div>
+  <h3>404</h3>
   <p>The requested page could not be found.</p>
+
+  <div class="blue-screen">
+    <p>
+      A problem has been detected and Windows has been shut down to prevent damage
+      <br>
+      to your computer.
+      <br><br>
+      PAGE_FAULT_IN_NONPAGED_AREA
+      <br><br>
+      If this is the first time you've seen this error screen,
+      <br>
+      restart your computer. If this screen appears again, follow
+      <br>
+      this steps:
+      <br><br>
+      Check to make sure any new hardware or software is properly installed.
+      <br>
+      If this is a new installation, ask your hardware or software manufacturer
+      <br>
+      for any Windows updates you might need.
+      <br><br>
+      If problems continue, disable or remove any newly installed hardware
+      <br>
+      or software. Disable BIOS memory options such as caching or shadowing.
+      <br>
+      If you need to use Safe Mode to remove or siable components, restart
+      <br>
+      your computer, press F8 to select Advanced Startup Options, and then
+      <br>
+      select Safe Mode.
+      <br><br>
+      Technical Information:
+      <br><br>
+      *** STOP: 0x00000050 (0x8F52C190, 0x8FD08501, 0x21545077, 0xBa45437C)
+    </p>
+  </div>
 </div>
