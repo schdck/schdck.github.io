@@ -5,7 +5,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 repository: schdck/schdck.github.io
 markdown: kramdown
 
-remote_theme: schdck/tale
+remote_theme: schdck/schdck.github.io.theme
 permalink:    /:title
 paginate:     10
 
