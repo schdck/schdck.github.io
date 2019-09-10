@@ -19,7 +19,8 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-remote-theme
-
+  - jemoji
+  
 # Author
 author:
   name: schdck
