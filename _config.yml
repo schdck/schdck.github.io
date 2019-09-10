@@ -1,19 +1,26 @@
+# Site settings
 title: schdck's blog
 url: "https://schdck.github.io"
 baseurl: "" # the subpath of your site, e.g. /blog
-
 repository: schdck/schdck.github.io
+
+# Build
 markdown: kramdown
 
 remote_theme: schdck/schdck.github.io.theme
 permalink:    /:title
 paginate:     10
 
+# Google Analytics
+google_analytics: UA-147566879-1
+
+# Plugins
 plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-remote-theme
 
+# Author
 author:
   name: schdck
   twitter_username: schmaedeck
