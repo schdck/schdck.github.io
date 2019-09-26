@@ -104,7 +104,7 @@ So, you'll need to get a command prompt at boot. In order to do that I usually u
 
 At the boot command prompt, mount the EFI partition and navigate to the EFI folder:
 
-{% highlight sh %}
+{% highlight PowerShell %}
 mountvol B: /s
 cd /d B:\EFI
 {% endhighlight %}
@@ -113,7 +113,7 @@ At this point, if you explore this folder, you should have your `Boot` folder wi
 
 ⚠️Remember to replace `{folder}` by the **exact** same thing you used in your `refind.conf` file.
 
-{% highlight sh %}
+{% highlight PowerShell %}
 ren Microsoft {folder}
 {% endhighlight %}
 
@@ -127,7 +127,7 @@ All you have to do is fix your EFI partition. I usually just format the partitio
 
 To format and rebuild the partition, boot into your Windows 10 media (I hope you have one), launch a command prompt and execute the following:
 
-{% highlight sh %}
+{% highlight PowerShell %}
 mountvol B: /s
 format B: /FS:FAT32
 bcdboot C:\Windows /s B: /f UEFI
