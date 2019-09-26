@@ -35,7 +35,7 @@ First of all, go ahead and disable UEFI's Secure Boot. I won't go into details o
 ### Getting started
 In ordet to get started, we'll need access to the Windows' FAT32 EFI partition. In order to do that, we'll have to mount it. From an elevated command prompt, issue the following command (where B: is the letter you want to assign to the partition):
 
-{% highlight sh %}
+{% highlight PowerShell %}
 mountvol B: /s
 {% endhighlight %}
 
@@ -142,15 +142,15 @@ This happened to me. In my case it was an issue with the NTFS driver, so all I h
 
 If it isn't a drive issue for you, see if any of the below helps. This is a quote from refind's author Roderick W. Smith:
 
-> This sort of problem normally indicates a filesystem issue -- rEFInd is getting stuck in an infinite loop attempting to read one of the filesystems on the disk. I recommend you try the following:
->  1) If you have any external disks attached to the computer, try
-   unplugging them. Such disks sometimes cause problems. If this fixes the problem but you need to use the external disk on a regular basis, you may need to further debug the problem as below; but if it's just a USB flash drive that you don't need to leave permanently attached, then this should be the end of it.
->  2) Remove (or move) all the EFI filesystem drivers from the "drivers", "drivers_x64", and "drivers_ia32" subdirectories of the rEFInd installation directory. (Normally there'll be only one drivers subdirectory; just remove all those driver files.) Reboot.
->  3) If rEFInd hangs even with no EFI filesystem drivers installed, then the problem is likely with the ESP or some other FAT filesystem. You can try doing a filesystem check on such partition(s) with dosfsck in Linux, CHKDSK in Windows, or similar utilities. In an extreme case, you could try backing up the ESP (and/or other FAT partitions), creating a fresh filesystem, and restoring the data.
->   4) If rEFInd comes up and shows a menu after removing the filesystem drivers, even if the menu options are incomplete, then this is good; it indicates that there's a problem with one of the filesystems or their drivers. You can then begin restoring the driver(s) that you need. Normally this will be just one, for whatever filesystem holds your Linux kernels. (You do NOT need the NTFS driver to boot Windows.)
->   5) If rEFInd works at this point, then you're done -- the problem was in some superfluous driver(s) that you weren't using.
->   6) If rEFInd hangs, then you can try booting in some other way and using a filesystem check utility like fsck on the filesystem(s) that can be read with the driver(s) you restored. With any luck this will fix the problem.
->   7) If the problem persists at this point, you have a number of options:
+> This sort of problem normally indicates a filesystem issue -- rEFInd is getting stuck in an infinite loop attempting to read one of the filesystems on the disk. I recommend you try the following:<br><br>
+>  1. If you have any external disks attached to the computer, try
+   unplugging them. Such disks sometimes cause problems. If this fixes the problem but you need to use the external disk on a regular basis, you may need to further debug the problem as below; but if it's just a USB flash drive that you don't need to leave permanently attached, then this should be the end of it.<br>
+>  2. Remove (or move) all the EFI filesystem drivers from the "drivers", "drivers_x64", and "drivers_ia32" subdirectories of the rEFInd installation directory. (Normally there'll be only one drivers subdirectory; just remove all those driver files.) Reboot.
+>  3. If rEFInd hangs even with no EFI filesystem drivers installed, then the problem is likely with the ESP or some other FAT filesystem. You can try doing a filesystem check on such partition(s) with dosfsck in Linux, CHKDSK in Windows, or similar utilities. In an extreme case, you could try backing up the ESP (and/or other FAT partitions), creating a fresh filesystem, and restoring the data.<br>
+>   4. If rEFInd comes up and shows a menu after removing the filesystem drivers, even if the menu options are incomplete, then this is good; it indicates that there's a problem with one of the filesystems or their drivers. You can then begin restoring the driver(s) that you need. Normally this will be just one, for whatever filesystem holds your Linux kernels. (You do NOT need the NTFS driver to boot Windows.)<br>
+>   5. If rEFInd works at this point, then you're done -- the problem was in some superfluous driver(s) that you weren't using.
+>   6. If rEFInd hangs, then you can try booting in some other way and using a filesystem check utility like fsck on the filesystem(s) that can be read with the driver(s) you restored. With any luck this will fix the problem.<br>
+>   7. If the problem persists at this point, you have a number of options:<br>
 >      a) Remove the offending filesystem driver, install GRUB, and use it to boot the Linux kernel. GRUB uses a different filesystem driver and so may not be affected.<br>
 >      b) If you don't already use one, create a small (~1GiB) partition to use as /boot, using a different filesystem than your main Linux partition. You can then install the EFI driver for the /boot partition, copy the contents of /boot to it, and adjust /etc/fstab to mount this partition at /boot. The ext4fs, Btrfs, and ReiserFS EFI drivers are the fastest ones.<br>
 >      c) Do as in option b, but use FAT, which requires no special driver. This works better with some distributions than others, though. Debian-based distributions often use symbolic links, which aren't supported on FAT, in /boot, for instance. Some Arch Linux users like to use FAT on /boot (or mount the ESP at /boot), by contrast.<br>
