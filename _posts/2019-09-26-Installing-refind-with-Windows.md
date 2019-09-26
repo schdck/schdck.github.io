@@ -10,8 +10,7 @@ At first, I tried following the [official documentation](https://www.rodsbooks.c
 
 So, I'll be describing here the steps I had to take in order to make everything work as expected. Here's a screenshot of the final result:
 
-![Screenshot of our desired result](images/refind_screenshot.jpg)
-_Our desired result_
+![Screenshot of the end result](images/refind_screenshot.jpg)
 
 ### What our goals are
  - Install and theme refind from a Windows 10 machine
@@ -27,7 +26,7 @@ _Our desired result_
  - [Explorer++](https://github.com/derceg/explorerplusplus) or some other file explorer that can be launched as Administrator (I'll assume that you have one, but it is not required at all. If you feel confortable, you can do all the file moving/editing from your command prompt)
  - A Windows 10 bootable USB stick (or DVD if you live in a cave)¹
 
-¹This isn't required, but is recommended in case you mess things up.
+¹**NOTE**: The Windows 10 bootable is not required, but is recommended in case you mess things up.
 
 ### Before we get started
 First of all, go ahead and disable UEFI's Secure Boot. I won't go into details on how to do it, since it changes from system to system. If you don't know how to do it just search around. Pay attention not to disable UEFI, just Secure Boot.
