@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Installing refind with Windows 10"
-listed: false
+listed: true
 ---
 
 In this blog post I'll be covering the process of installing and troubleshooting of the [**refind**](https://www.rodsbooks.com/refind/) bootloader from a machine running Windows 10 1903 (although I hope this will survive any updates from Microsoft).
