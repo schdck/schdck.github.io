@@ -24,10 +24,10 @@ _Our desired result_
  - [Explorer++](https://github.com/derceg/explorerplusplus) or some other file explorer that can be launched as Administrator (I'll assume that you have one, but it is not required at all. If you feel confortable, you can do all the file moving/editing from your command prompt)
  <br>
 
- ### Getting started
- First, we'll need access to the Windows' FAT32 EFI partition. In order to do that, we'll have to mount it.
+### Getting started
+First, we'll need access to the Windows' FAT32 EFI partition. In order to do that, we'll have to mount it.
 
- From an Administrator command prompt, issue the following command (where B: is the letter you want to assign to the partition):
+From an Administrator command prompt, issue the following command (where B: is the letter you want to assign to the partition):
 
 {% highlight sh %}
 mountvol B: /s
