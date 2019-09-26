@@ -25,7 +25,6 @@ _Our desired result_
  <br>
 
  ### Getting started
-
  First, we'll need access to the Windows' FAT32 EFI partition. In order to do that, we'll have to mount it.
 
  From an Administrator command prompt, issue the following command (where B: is the letter you want to assign to the partition):
