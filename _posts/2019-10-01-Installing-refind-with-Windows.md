@@ -1,10 +1,10 @@
 ---
 layout: post
 title:  "Installing refind with Windows 10"
-listed: true
+listed: false
 ---
 
-In this blog post I'll be covering the process of installing and troubleshooting of the [**refind**](https://www.rodsbooks.com/refind/) bootloader from a machine running Windows 10 1903 (although I hope this will survive any updates from Microsoft).
+In this blog post I'll be covering the process of installing and troubleshooting [**refind**](https://www.rodsbooks.com/refind/) bootloader from a machine running Windows 10 1903 (although I hope this will survive any updates from Microsoft).
 
 ![Screenshot of our desired result](images/refind_screenshot.jpg)
 _Our desired result_
@@ -22,6 +22,7 @@ _Our desired result_
  - A Windows 10 bootable USB stick (or DVD if you live in a cave)
  - [refind](https://www.rodsbooks.com/refind/getting.html) (duh)
  - [Explorer++](https://github.com/derceg/explorerplusplus) or some other file explorer that can be launched as Administrator (I'll assume that you have one, but it is not required at all. If you feel confortable, you can do all the file moving/editing from your command prompt)
+ <br>
 
  ### Getting started
 
