@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Installing refind with Windows 10"
+title:  "Installing refind from Windows 10"
 listed: true
 ---
 
