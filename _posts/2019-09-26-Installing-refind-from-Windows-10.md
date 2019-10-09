@@ -88,7 +88,7 @@ This is actually quite simple, but will require a few hacks. Lets begin.
 #### Installing refind
 First of all, rename the existing `EFI\Boot` folder to something like `EFI\Boot.old`, so that you have a backup in case you need it. With this out of the way, create a new `EFI\Boot` folder and copy refind's files there. Rename `refind_x64.efi` to `bootx64.efi`.
 
-One more thing, add the following entry to your `refind.conf` file (this is important, trust me), replacing `{folder}` to anything **BUT** `Microsoft`, I'll use `_Microsoft` and `{path\to\your\icon.png}` with the actual path of your icon:
+One more thing, add the following entry to your `refind.conf` file (this is important, trust me), replacing `{folder}` to anything **BUT** `Microsoft` (I'll use `_Microsoft`) and `{path\to\your\icon.png}` with the actual path of your icon:
 
 ```
 menuentry Windows {
