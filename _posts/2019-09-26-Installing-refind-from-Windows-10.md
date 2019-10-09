@@ -30,7 +30,7 @@ So, I'll be describing here the steps I had to take in order to make everything 
 
 ### Before we get started
 
-**UPDATE:** Before you proceed, I recommend trying the steps on the official documentation and using this *only as last resort*. If you do have to follow this path, I recommend you **backup your refind installation folder** after the installation is complete. When you are installing some OSes (e.g. Linux), they will overwrite refind's files and prevent you from booting into refind (but booting into the fresh installed OS will work). If this happens, all you have to do is login into the OS you just installed and restore your refind backup.
+⚠️ **UPDATE:** Before you proceed, I recommend trying the steps on the official documentation and using this *only as last resort*. If you do have to follow this path, I recommend you **backup your refind installation folder** after the installation is complete. When you are installing some OSes (e.g. Linux), they will overwrite refind's files and prevent you from booting into refind (but booting into the fresh installed OS will work). If this happens, all you have to do is login into the OS you just installed and restore your refind backup.
 
 First of all, go ahead and disable UEFI's Secure Boot. I won't go into details on how to do it, since it changes from system to system. If you don't know how to do it just search around. Pay attention not to disable UEFI, just Secure Boot.
 
