@@ -1,8 +1,8 @@
 ---
 layout: about
-title: "Portifolio"
+title: "Portfolio"
 author: "schdck"
-permalink: /portifolio/
+permalink: /portfolio/
 ---
 
 ## Projects
