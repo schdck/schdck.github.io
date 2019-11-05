@@ -7,10 +7,10 @@ permalink: /portfolio/
 
 ## Projects
 
-#### [Remoteflix](https://github.com/remoteflix/) (work-in-progress)
-<sub>C# (WPF) and JavaScript (React Native)</sub>
+#### [Remoteflix](https://github.com/schdck/RemoteFlix/) 
+<sub>C# (WPF)</sub>
 
-Project that consists of a desktop application and a mobile one. Aims to allow the user to control media players (Netflix, VLC, Popcorn, etc.) running on their desktop/notebook from their phones through LAN (yeah, I was tired of getting up to pause VLC to take a look at my phone, so what?)
+A desktop application that allows the user to control a media player running on their computer from their smartphone. Works by exposing a web-server that receives requests and performs them on the player.
 <br>
 
 #### [SimpleDialogs](https://github.com/schdck/SimpleDialogs)
