@@ -19,4 +19,4 @@ Currently interested in infosec. Focusing on iOS and WebKit.
 
 ## Projects
 
-Click [here](https://schdck.github.io/portifolio) to see my portfolio.
+Click [here](https://schdck.github.io/portfolio) to see my portfolio.
