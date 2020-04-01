@@ -14,11 +14,9 @@ I recommend creating a profile with an user that has only the permissions requir
 
 ## Setting up `claudia`
 
-In case you are not familiar with it, [claudia.js](https://claudiajs.com/) is a open-source deployment tool aimed to make the process of deploying a Node.js project to AWS Lambda easier. 
+In case you are not familiar with it, [claudia.js](https://claudiajs.com/) is a open-source deployment tool aimed at making the process of deploying a Node.js project to AWS Lambda easier. 
 
-I'll summarize what we will need to configure, but if you run into any issues check their [official documentation](https://claudiajs.com/documentation.html).
-
-First, go ahead and install it globally:
+I'll summarize what we will need to configure, but if you run into any issues check their [official documentation](https://claudiajs.com/documentation.html). First, go ahead and install it globally:
 
 ```
 npm install claudia -g
@@ -99,17 +97,19 @@ region    | AWS region to deploy to (e.g `us-east-1`)
 name      | The name of the API to be created on API Gateway
 profile   | The profile you defined in your `.aws/credentials` file (e.g. `devops-credentials`)
 
+<br>
+
 A file named `api-config.json` should have been created. Add it to source control.
 
 ### Setting up your secrets on GitHub
 
-In a web browser, navigate to you repository page and then to Settings > Secrets.
+In a web browser, navigate to you repository page and then to `Settings > Secrets`.
 
 In here, add a key called `AWS_ACCESS_KEY_ID` and another called `AWS_SECRET_ACCESS_KEY` with the appropriate values. Also add keys for any other environment variables you want passed to your API (e.g. JWT secret, database connection string, etc.)
 
 ### Creating GitHub Actions
 
-Back to your code editor, navigate to .github\workflows (create it if it doesn't exist). Create a file called `deploy.yml`.
+Back to your code editor, navigate to the folder `.github\workflows` (create it if it doesn't exist). Create a file called `deploy.yml`.
 
 Add the following content:
 
@@ -167,8 +167,8 @@ jobs:
 
 If you want, you can create a `release.yml` that is run when pushes are made to `master`. Just remember to change the `--version` flag on the last step of the Action and the environment variables you are loading.
 
-The reason I had to use an intermediate Action to convert the environment variables to JSON was that my environment variable's values contained commas (`,`), so I could not pass them using `claudia`'s `--set-env`. If this is not your case, you can remove that step and modify the last one to pass your variables directly in the command line.
+The reason I had to use an intermediate Action to convert the environment variables to JSON was that my environment variable's values contained commas (`,`). Because of that, I could not pass them directly using `claudia`'s `--set-env`. If this is not your case, you can remove that step and modify the last one to pass your variables straight into the command line.
 
----
+<br><br>
 
 That's it for today. As always, if you have any questions or feedback, please drop me a line 🙂
