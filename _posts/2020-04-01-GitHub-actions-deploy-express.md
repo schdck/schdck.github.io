@@ -80,7 +80,7 @@ claudia generate-serverless-express-proxy --express-module app
 
 This should create a `lambda.js` file in your project's root folder. Add it to source control.
 
-### Creating the API
+## Creating the API
 
 Run the following command to deploy your API to API Gateway:
 
@@ -101,13 +101,13 @@ profile   | The profile you defined in your `.aws/credentials` file (e.g. `devop
 
 A file named `api-config.json` should have been created. Add it to source control.
 
-### Setting up your secrets on GitHub
+## Setting up your secrets on GitHub
 
 In a web browser, navigate to you repository page and then to `Settings > Secrets`.
 
 In here, add a key called `AWS_ACCESS_KEY_ID` and another called `AWS_SECRET_ACCESS_KEY` with the appropriate values. Also add keys for any other environment variables you want passed to your API (e.g. JWT secret, database connection string, etc.)
 
-### Creating GitHub Actions
+## Creating GitHub Actions
 
 Back to your code editor, navigate to the folder `.github\workflows` (create it if it doesn't exist). Create a file called `deploy.yml`.
 
