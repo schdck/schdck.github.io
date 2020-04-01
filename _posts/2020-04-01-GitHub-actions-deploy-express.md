@@ -12,7 +12,7 @@ I'll assume you have you AWS ID and secret set up on your machine. In case you d
 
 I recommend creating a profile with an user that has only the permissions required by `claudia` (`AWSLambdaFullAccess`, `IAMFullAccess` and `AmazonAPIGatewayAdministrator`).
 
-## Setting up `claudia`
+## Setting up claudia
 
 In case you are not familiar with it, [claudia.js](https://claudiajs.com/) is a open-source deployment tool aimed at making the process of deploying a Node.js project to AWS Lambda easier. 
 
