@@ -132,8 +132,8 @@ jobs:
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
-        aws-access-key-id: $\{{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: $\{{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-access-key-id: ${{ "{{ secrets.AWS_ACCESS_KEY_ID " }}}}
+        aws-secret-access-key: ${{ "{{ secrets.AWS_SECRET_ACCESS_KEY " }}}}
         # Replace this with the region you want to deploy to
         aws-region: us-east-1
     # This step converts the variables you defined as GitHub secrets to a JSON
@@ -145,8 +145,9 @@ jobs:
         file-name: "./env.dev.json"
         # Declare here the variables you want to be passed to your API
         STAGE: "DEV"
-        JWT_KEY: $\{{ secrets.JWT_SECRET_DEV }}
-        MONGO_URL: $\{{ secrets.MONGO_URL_DEV }}
+        
+        JWT_KEY: ${{ "{{ secrets.JWT_SECRET_DEV " }}}}
+        MONGO_URL: $\{{ "{{ secrets.MONGO_URL_DEV " }}}}
     # This step will install claudia globally and build/test your code
     - name: Use Node.js 12.x
       uses: actions/setup-node@v1
