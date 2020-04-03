@@ -145,7 +145,6 @@ jobs:
         file-name: "./env.dev.json"
         # Declare here the variables you want to be passed to your API
         STAGE: "DEV"
-        
         JWT_KEY: ${{ "{{ secrets.JWT_SECRET_DEV " }}}}
         MONGO_URL: $\{{ "{{ secrets.MONGO_URL_DEV " }}}}
     # This step will install claudia globally and build/test your code
